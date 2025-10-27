@@ -1,0 +1,28 @@
+@import './mq.scss';
+
+:host ::ng-deep {
+  .Heading1 > h1,
+  .Heading2 > h2,
+  .Heading3 > h3,
+  .Heading4 > h4,
+  .Heading5 > h5,
+  .Heading6 > h6,
+  .BodyP > p,
+  .BodySpan > span {
+    font-family: 'Overpass', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+
+  .Heading4 h4 {
+    font-size: var(--text-l);
+    line-height: normal;
+  }
+
+  .BodyP p {
+    font-size: var(--text-xs);
+    line-height: normal;
+  }
+}
+
+

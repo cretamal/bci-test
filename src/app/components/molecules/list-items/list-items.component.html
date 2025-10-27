@@ -1,0 +1,14 @@
+<div id="list-movies">
+  <ul>
+    <li *ngFor="let card of movies$ | async">
+      <app-card [DataCard]="card"></app-card>
+    </li>
+  </ul>
+  <div id="controls">
+    <button mat-fab color="warn" (click)="loadPrevious()" matTooltip="Atras" [matTooltipPosition]="'above'"> < </button>
+    <button mat-fab color="warn" (click)="loadMore()" matTooltip="Siguiente" [matTooltipPosition]="'above'"> > </button>
+    
+  </div>
+</div>
+
+

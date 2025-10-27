@@ -1,0 +1,43 @@
+@import '../../sub-atomic/scss/mq.scss';
+
+#list-movies {
+    position: relative;
+    padding: 45px 0;
+    ul {
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 15px;
+        row-gap: 15px;
+        li {
+            list-style: none;
+        }
+        @include responsive-breakpoints(tablet-landscape) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include responsive-breakpoints(tablet-portrait) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include responsive-breakpoints(iphone-landscape) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include responsive-breakpoints(iphone-portrait) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        
+    }
+}
+
+#controls {
+    width: 100%;
+    max-width: 120px;
+    height: 60px;
+    display: flex;
+    column-gap: 15px;
+    position: fixed;
+    z-index: 9999;
+    top: 50%;
+    right: 30px;
+    margin-top: -30px;
+}

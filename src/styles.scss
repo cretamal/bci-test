@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@100..900&display=swap');
+@import './app/components/sub-atomic/scss/theme-colors.scss';
+@import './app/components/sub-atomic/scss/mq.scss';
+
+:root {
+  --text-xxxl: 56px;
+  --text-xxl: 44px;
+  --text-xl2: 32px;
+  --text-xl: 26px;
+  --text-l: 20px;
+  --text-l2: 20px;
+  --text-m: 16px;
+  --text-s: 18px;
+  --text-xs: 14px;
+  --text-xxs: 12px;
+  --text-xxxs: 10px;
+}
+
+@include responsive-breakpoints(iphone-portrait) {
+  :root {
+    --text-xxxl: 40px;
+    --text-xxl: 28px;
+    --text-xl2: 22px;
+    --text-xl: 20px;
+    --text-l: 18px;
+    --text-l2: 14px;
+    --text-m: 26px;
+    --text-s: 18px;
+    --text-xs: 14px;
+    --text-xxs: 12px;
+    --text-xxxs: 10px;
+  }
+}
+
+body {
+    font-family: 'Overpass', Arial, sans-serif;
+    background: map-get($white-palette, 900);
+    color: map-get($gray-palette, 900);
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    padding: 0;
+    margin: 0;
+
+    header {
+        background-color: mat-color($theme-bci-test-gray, 900);
+        color: mat-color($theme-bci-test-primaria, default-contrast);
+        padding: 16px;
+    }
+
+}

@@ -1,0 +1,15 @@
+#formEdit {
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            width: 100%;
+            display: block;
+            list-style: none;
+            .mat-input-container {
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+}

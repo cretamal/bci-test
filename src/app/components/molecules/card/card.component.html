@@ -1,0 +1,32 @@
+<mat-card class="card-movie" [class.addedMovie]="DataCard?.isFavorite">
+  <mat-card-header>
+    <mat-card-title>
+      <app-text [Theme]="'Heading4'" Type="h4" [Label]="DataCard.originalTitle | textWrapper:30"></app-text>      
+    </mat-card-title>
+  </mat-card-header>
+  <ng-container *ngIf="DataCard.thumbnails.length > 0">
+    <div class="thumb-movie">
+      <mat-chip-list *ngIf="DataCard.releaseDate">
+        <mat-chip>{{DataCard.releaseDate}}</mat-chip>
+      </mat-chip-list>
+      <img mat-card-image [src]="DataCard.thumbnails[2]['url']" [alt]="DataCard.originalTitle">
+      <mat-card-actions>
+        <button mat-button (click)="addFav(DataCard)">
+            {{ DataCard?.isFavorite ? 'Remover Favorito' : 'Agregar Favorito' }}
+        </button>
+        <button mat-button (click)="openDialog(DataCard)">Editar</button>
+      </mat-card-actions>
+    </div>
+  </ng-container>
+  <mat-card-content>
+    <mat-chip-list>
+      <mat-chip *ngFor="let genre of DataCard?.genres">{{ genre }}</mat-chip>
+    </mat-chip-list>
+    <app-text 
+      [Theme]="'BodyP'" 
+      Type="p" 
+      [Label]="DataCard.description ? (DataCard.description | textWrapper:120) : 'Sin descripción'">
+    </app-text>
+
+  </mat-card-content>
+</mat-card>

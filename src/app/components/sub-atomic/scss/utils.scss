@@ -1,0 +1,3 @@
+@mixin smooth-transition($duration: 0.3s, $timing: ease-in-out) {
+  transition: all $duration $timing;
+}

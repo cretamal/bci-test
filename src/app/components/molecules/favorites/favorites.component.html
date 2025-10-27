@@ -1,0 +1,12 @@
+<div id="favorites">
+  <mat-list>
+    <mat-list-item *ngFor="let favorite of favorites">
+      <img matListAvatar [src]="favorite.thumbnails[0].url" [alt]="favorite.originalTitle">
+      <h3 matLine> {{favorite.originalTitle}} </h3>
+      <p matLine>
+        <span> {{favorite.type}} </span>
+        <!-- <span class="demo-2"> -- {{message.content}} </span> -->
+      </p>
+    </mat-list-item>
+  </mat-list>
+</div>

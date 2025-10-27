@@ -1,0 +1,23 @@
+// MediaQueries
+$breakpoints: (
+  iphone-portrait: "(max-width: 821px)",
+  iphone-landscape: "(min-width: 577px) and (max-width: 768px)",
+  tablet-portrait: "(min-width: 768px) and (max-width: 996px)",
+  tablet-landscape: "(min-width: 996px) and (max-width: 1280px) and (orientation: landscape)",
+  desktop: "(min-width: 1439px)",
+  desktop-md: "(min-width: 1440px) and (min-width: 1679px)",
+  desktop-xl: "(min-width: 1680px) and (min-width: 1920px)",
+  desktop-qhd: "(min-width: 1921px) and (min-width: 3841px)",
+);
+
+@mixin responsive-breakpoints($breakpoint) {
+  $breakpoint-config: map-get($breakpoints, $breakpoint);
+
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{$breakpoint-config} {
+      @content;
+    }
+  } @else {
+    @warn "El breakpoint '#{$breakpoint}' no está definido en la lista de breakpoints.";
+  }
+}

@@ -1,0 +1,115 @@
+@import '../../sub-atomic/scss/theme-colors.scss';
+@import '../../sub-atomic/scss/utils.scss';
+
+:host ::ng-deep { 
+    .mat-card:not([class*=mat-elevation-z]) {
+        box-shadow: 0 0px 0px 0px rgba(0,0,0,0),0 2px 2px 0 rgba(0,0,0,0),0 1px 5px 0 rgba(0,0,0,0);
+    }
+    mat-card {
+        padding: 10px 24px;
+        mat-card-header {
+            width: 100%;
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0;
+            min-height: 60px;
+        }
+        .mat-card-header-text {
+            display: flex;
+            align-items: center;
+            mat-card-title {
+                margin-bottom: 0;
+            }
+        }
+        .thumb-movie {
+            @include smooth-transition();
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            margin: 0 0 10px 0;
+            background: mat-color($theme-bci-test-gray, 900);
+            border: 4px solid mat-color($theme-bci-test-warn, 500);
+            .mat-card-image {
+                width: 100%;
+                height: auto;
+                display: block;
+                margin: 0;
+                padding: 0;
+            }
+            mat-chip-list {
+                position: absolute;
+                top: 10px;
+                left: 5px;
+                .mat-chip {
+                    padding: 3px 12px;
+                    background: mat-color($theme-bci-test-warn, 800);
+                    color: mat-color($theme-bci-test-white, 900);
+                    font-weight: 900;
+                }
+            }
+            mat-card-actions {
+                width: 100%;
+                position: absolute;
+                bottom: 0px;
+                left: 0;
+                background: mat-color($theme-bci-test-yellow, 800);
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: space-between;
+                .mat-button {
+                    width: 100%;
+                    padding: 5px 10px;
+                    margin: 0;
+                    color: mat-color($theme-bci-test-black, 900);
+                    font-size: 12px;
+                    @include smooth-transition();
+                    &:hover {
+                        background: mat-color($theme-bci-test-acento, 900);
+                        color: mat-color($theme-bci-test-white, 900);
+                    }
+                }
+                .mat-button-ripple {
+                    z-index: -1;
+                }
+                .mat-button-wrapper {
+                    z-index: 99;
+                    position: relative;
+                }
+                
+            }
+            &:hover {
+                box-shadow: 
+                    0 1px 2px rgba(0, 0, 0, 0.1), 
+                    0 2px 4px rgba(0, 0, 0, 0.08), 
+                    0 4px 10px rgba(0, 0, 0, 0.06);
+            }
+        }
+        .mat-card-content {
+            mat-chip-list {
+                margin: 15px 0;
+                display: block;
+                .mat-chip {
+                    padding: 3px 10px;
+                    font-size: 10px;
+                }
+            }
+        }        
+        
+    }
+    .mat-card.addedMovie {
+        .thumb-movie {
+            border: 4px solid mat-color($theme-bci-test-warn, 900);
+            mat-card-actions {
+                .mat-button:nth-child(1) {
+                    background: mat-color($theme-bci-test-warn, 900);
+                    color: mat-color($theme-bci-test-white, 900);                     
+                }
+            }
+        }        
+    } 
+
+    
+
+}

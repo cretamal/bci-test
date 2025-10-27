@@ -1,0 +1,140 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$green-palette: (
+  900: #28652B,   // dark
+  800: #28892B,   // normal
+  700: #53A155,   // 80
+  500: #7EB880,   // 60
+  300: #A9D0AA,   // 40
+  100: #D4E7D5,   // 20
+  contrast: (
+    900: white,
+    800: white,
+    700: white,
+    500: white,
+    300: rgba(0, 0, 0, 0.87),
+    100: rgba(0, 0, 0, 0.87)
+  )
+);
+
+
+$red-palette: (
+  900: #ED0C19,
+  800: #F13D47,
+  700: #F46D75,
+  500: #F89EA3,
+  300: #FBCED1,
+  100: #FBCED1,
+  contrast: (
+    900: white,
+    800: white,
+    700: white,
+    500: rgba(0, 0, 0, 0.87),
+    300: rgba(0, 0, 0, 0.87),
+    100: rgba(0, 0, 0, 0.87)
+  )
+);
+
+
+$blue-palette: (
+  900: #1D5699,
+  800: #2772CC,
+  700: #528ED6,
+  500: #7DAAE0,
+  300: #A9C7EB,
+  100: #D4E3F5,
+  contrast: (
+    900: white,
+    800: white,
+    700: white,
+    500: rgba(0, 0, 0, 0.87),
+    300: rgba(0, 0, 0, 0.87),
+    100: rgba(0, 0, 0, 0.87)
+  )
+);
+
+
+$yellow-palette: (
+  900: #FFE300,
+  800: #FFE933,
+  700: #FFEE66,
+  500: #FFF499,
+  300: #FFF9CC,
+  100: #FFF9CC,
+  contrast: (
+    900: rgba(0, 0, 0, 0.87),
+    800: rgba(0, 0, 0, 0.87),
+    700: rgba(0, 0, 0, 0.87),
+    500: rgba(0, 0, 0, 0.87),
+    300: rgba(0, 0, 0, 0.87),
+    100: rgba(0, 0, 0, 0.87)
+  )
+);
+
+
+$gray-palette: (
+  900: #2C3A41,
+  800: #37474F,
+  700: #546E7A,
+  500: #BBC5CA,
+  300: #E2E8EA,
+  100: #F6F7F8,
+  contrast: (
+    900: white,
+    800: white,
+    700: white,
+    500: rgba(0, 0, 0, 0.87),
+    300: rgba(0, 0, 0, 0.87),
+    100: rgba(0, 0, 0, 0.87)
+  )
+);
+
+$white-palette: (
+  900: #FFFFFF,
+  800: #FAFAFA,
+  700: #F5F5F5,
+  500: #EEEEEE,
+  300: #E0E0E0,
+  100: #F9F9F9,
+  contrast: (
+    900: rgba(0, 0, 0, 0.87),
+    800: rgba(0, 0, 0, 0.87),
+    700: rgba(0, 0, 0, 0.87),
+    500: rgba(0, 0, 0, 0.87),
+    300: rgba(0, 0, 0, 0.87),
+    100: rgba(0, 0, 0, 0.87)
+  )
+);
+
+$black-palette: (
+  900: #000000,
+  800: #121212,
+  700: #1E1E1E,
+  500: #212121,
+  300: #2E2E2E,
+  100: #3C3C3C,
+  contrast: (
+    900: white,
+    800: white,
+    700: white,
+    500: white,
+    300: white,
+    100: white
+  )
+);
+
+$theme-bci-test-primaria: mat-palette($green-palette, 800, 500, 900);
+$theme-bci-test-acento:   mat-palette($blue-palette, 800, 500, 900);
+$theme-bci-test-warn:     mat-palette($red-palette, 800, 500, 900);
+
+$theme-bci-test-white:     mat-palette($white-palette, 900, 500, 900);
+$theme-bci-test-black:     mat-palette($black-palette, 900, 500, 900);
+
+$theme-bci-test-gray:     mat-palette($gray-palette, 900, 500, 100);
+$theme-bci-test-yellow:   mat-palette($yellow-palette, 900, 500, 100);
+
+
+
+$theme-bci-test: mat-light-theme($theme-bci-test-primaria, $theme-bci-test-acento, $theme-bci-test-warn);
+@include angular-material-theme($theme-bci-test);
