@@ -1,27 +1,111 @@
-# TestBci
+# Test BCI
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.8.
+Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-cli) versión **1.6.8**.
 
-## Development server
+## 🚀 Servidor de desarrollo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Ejecuta el siguiente comando:
 
-## Code scaffolding
+```bash
+ng serve
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Luego abre tu navegador en **[http://localhost:4200/](http://localhost:4200/)**  
+La aplicación se recargará automáticamente cada vez que modifiques alguno de los archivos fuente.
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## 🧩 Generar componentes o elementos
 
-## Running unit tests
+Puedes crear nuevos componentes, directivas, servicios, etc. usando el CLI de Angular:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+ng generate component nombre-componente
+```
 
-## Running end-to-end tests
+También puedes generar:
+- Directivas: `ng generate directive nombre-directiva`
+- Pipes: `ng generate pipe nombre-pipe`
+- Servicios: `ng generate service nombre-servicio`
+- Módulos: `ng generate module nombre-modulo`
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+---
 
-## Further help
+## 🏗️ Compilar el proyecto
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Para construir el proyecto y generar los archivos listos para producción:
+
+```bash
+ng build --prod
+```
+
+Los archivos compilados se almacenarán en el directorio `dist/`.
+
+---
+
+## 🧪 Ejecutar pruebas unitarias
+
+Ejecuta las pruebas unitarias con [Karma](https://karma-runner.github.io):
+
+```bash
+ng test
+```
+
+---
+
+## 🌐 Pruebas end-to-end (E2E)
+
+Ejecuta las pruebas end-to-end con [Protractor](http://www.protractortest.org/):
+
+```bash
+ng e2e
+```
+
+---
+
+## 🏁 Visualizar la aplicación compilada
+
+1. Asegúrate de haber ejecutado `ng build --prod`.  
+2. Dentro de la carpeta `dist/`, abre el archivo `index.html` en tu navegador o sirve la carpeta con un servidor local como:
+
+```bash
+npx http-server dist/
+```
+
+Luego abre **http://localhost:8080** (o el puerto que indique la consola).
+
+> 💡 En caso de subirlo a GitHub Pages o Vercel, asegúrate de usar rutas con `useHash: true` para evitar errores 404.
+
+---
+
+## 🌍 Publicar en GitHub Pages
+
+Si deseas desplegar el proyecto en **GitHub Pages**, sigue estos pasos:
+
+1. Instala el paquete de publicación:
+   ```bash
+   npm install -g angular-cli-ghpages
+   ```
+
+2. Compila el proyecto para producción con el nombre correcto de la carpeta:
+   ```bash
+   ng build --prod --base-href "https://github.com/cretamal/bci-test"
+   ```
+
+3. Sitio quedará disponible en:
+   ```
+   https://bci-test-carlosretamal.netlify.app/#/home
+   ```
+
+---
+
+## 📘 Ayuda adicional
+
+Para obtener más ayuda con Angular CLI, ejecuta:
+
+```bash
+ng help
+```
+
+O visita la documentación oficial en:  
+[Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md)
