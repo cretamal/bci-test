@@ -20,7 +20,7 @@
         </mat-form-field>
       </li>
     </ul>
-    <button mat-raised-button color="primary" (click)="save()">Guardar</button>
+    <button mat-raised-button color="primary" (click)="save()" [disabled]="!formData.valid">Guardar</button>
   </form>
 </div>
 

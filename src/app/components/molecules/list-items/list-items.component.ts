@@ -26,8 +26,6 @@ export class ListItemsComponent implements OnInit {
   }
 
   getDataMovies() {
-    console.log('getDataMovies');
-
     // init carga
     this.moviesService.getMovies().subscribe();
 

@@ -17,7 +17,7 @@ import { CardComponent } from './components/molecules/card/card.component';
 
 // MATERIAL ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import { MatCardModule, MatFormFieldModule, MatInputModule, MatNativeDateModule } from '@angular/material';
+import { ErrorStateMatcher, MatCardModule, MatFormFieldModule, MatInputModule, MatNativeDateModule, ShowOnDirtyErrorStateMatcher } from '@angular/material';
 import { ListItemsComponent } from './components/molecules/list-items/list-items.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
@@ -79,7 +79,8 @@ import { ModalEditMovieComponent } from './components/molecules/modal-edit-movie
     },
     MoviesService,
     FavoritesService,
-    ParseDatePipe
+    ParseDatePipe,
+    {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}
   ],
   entryComponents: [
     ModalEditMovieComponent

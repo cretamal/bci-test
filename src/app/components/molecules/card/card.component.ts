@@ -21,9 +21,7 @@ export class CardComponent implements OnInit {
     public dialog: MatDialog,
   ) { }
 
-  ngOnInit() {
-    console.log(this.DataCard);
-  }
+  ngOnInit() {}
 
   openDialog(movie: any): void {
   const dialogRef = this.dialog.open(ModalEditMovieComponent, {
@@ -44,7 +42,6 @@ export class CardComponent implements OnInit {
 }
 
   addFav(movie:any){
-    console.log('addFav', movie);
     this.favoritesService.addFavorite(movie).subscribe(added => {
        if (added) {
         this.addedMovies.add(movie.id); // Add

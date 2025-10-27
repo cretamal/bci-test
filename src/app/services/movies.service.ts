@@ -29,9 +29,9 @@ export class MoviesService {
   }
 
   loadMovies(): Observable<any[]> {
-    return this.http.get<any[]>('assets/data/dummy.json').pipe(
+    return this.http.get<any[]>(`${this.url}imdb/top250-movies`).pipe(
       tap((movies) => {
-        this.allMovies = movies.slice(1).filter(movie => movie.thumbnails && movie.thumbnails.length > 0);;
+        this.allMovies = movies;
         this.currentPage = 1;
         this.emitCurrentPage();
       })
