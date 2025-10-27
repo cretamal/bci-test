@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import  { MovieSearchEngineComponent } from './pages/movie-search-engine/movie-search-engine.component'
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' }, // ruta vacía -> home
@@ -9,7 +10,12 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, { useHash: true })
+  ],
+  providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

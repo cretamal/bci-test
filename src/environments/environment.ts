@@ -3,6 +3,6 @@ export const environment = {
     PROTOCOL: 'https://',
     HOST: 'imdb236.p.rapidapi.com/',
     API: 'api/',
-    TOKEN_APP:'791f6c299amsh4aefb7af28818fep154e6bjsnf3870450f39c',
+    TOKEN_APP:'0242525f22msh59d6703dcf5aa8cp14e895jsne334e619161e',
     APP:'default-application_6225461',
 }
